@@ -41,7 +41,7 @@ const EmailSharePage = () => {
 
   const handleSendEmail = () => {
     let emailContent = `Kết quả đánh giá khả năng của mình trong việc lắng nghe, hiểu và đáp ứng các tín hiệu từ khách hàng: ${totalScore} điểm.\n\n`;
-    emailContent += `Để tham khảo kết quả của tôi, bạn có thể xem thumbnail dưới đây: ${levelImage}\n\n`;
+    emailContent += `Để tham khảo kết quả của tôi, bạn có thể xem thumbnail dưới đây:\n\n ${levelImage}\n\n`;
     emailContent += `Chia sẻ kết quả này với đồng nghiệp hoặc bạn bè của mình!`;
 
     const subject = "Kết quả đánh giá của tôi về khả năng lắng nghe và đáp ứng tín hiệu khách hàng";

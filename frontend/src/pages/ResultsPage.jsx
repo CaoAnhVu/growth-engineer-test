@@ -12,6 +12,19 @@ const ResultsPage = () => {
   const navigate = useNavigate(); // Dùng để điều hướng đến trang khác
   const { totalScore } = state || {}; // Lấy điểm tổng từ state, nếu không có thì mặc định là undefined
 
+  // useEffect(() => {
+  //   const queryParams = new URLSearchParams(window.location.search);
+  //   const score = parseInt(queryParams.get("score"), 10);
+
+  //   if (!isNaN(score)) {
+  //     const levelImage = getLevelThumbnail(score); // Chọn ảnh theo điểm
+
+  //     // Cập nhật thẻ Open Graph cho ảnh
+  //     document.querySelector('meta[property="og:image"]').setAttribute("content", levelImage);
+  //     document.querySelector('meta[property="og:title"]').setAttribute("content", `Kết quả đánh giá: ${score} điểm`);
+  //     document.querySelector('meta[property="og:description"]').setAttribute("content", `Mức độ lắng nghe và phản hồi với khách hàng của tôi là: ${score} điểm.`);
+  //   }
+  // }, []);
   // Kiểm tra nếu không có điểm tổng, sẽ trả về thông báo "Không có kết quả"
   if (totalScore === undefined) {
     return <Text color="white">No results available</Text>;
